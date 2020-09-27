@@ -11,7 +11,7 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("FirstActivity",this.toString());
+        Log.d("FirstActivity","Task id is "+getTaskId());
         setContentView(R.layout.first_layout);//给当前活动增加一个布局:res->layout->first_layout.xml
         Button button1 = (Button) findViewById(R.id.button_1);//获取在布局文件中定义的元素
         //为按钮注册一个监听器
