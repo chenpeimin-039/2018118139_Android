@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--standard模式-->
-<!--        <activity android:name=".FirstActivity"
+
+<!--standard模式
+        <activity
+            android:name=".FirstActivity"
             android:launchMode="standard"
             android:label="This is FirstActivity">
             <intent-filter>
@@ -19,9 +21,23 @@
             </intent-filter>
         </activity>
 -->
-<!--singleTop模式-->
-        <activity android:name=".FirstActivity"
+
+<!--singleTop模式
+        <activity
+            android:name=".FirstActivity"
             android:launchMode="singleTop"
+            android:label="This is FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+-->
+
+<!--singleTask模式-->
+        <activity
+            android:name=".FirstActivity"
+            android:launchMode="singleTask"
             android:label="This is FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,5 +49,4 @@
             android:label="This is SecondActivity" >
         </activity>
     </application>
-
 </manifest>
