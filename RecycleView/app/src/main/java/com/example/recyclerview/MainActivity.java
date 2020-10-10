@@ -15,12 +15,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initFruits();
+        initFruits();       //初始化数据
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        //用于实现瀑布流布局（两参数：指定布局列数，指定布局的排列方向）
+        //StaggeredGridLayoutManager.VERTICAL  让布局纵向排列
         StaggeredGridLayoutManager layoutManager = new
                 StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-        FruitAdapter adapter = new FruitAdapter(fruitList);
+        FruitAdapter adapter = new FruitAdapter(fruitList); //适配器
         recyclerView.setAdapter(adapter);
     }
 

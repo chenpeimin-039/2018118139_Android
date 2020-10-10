@@ -7,15 +7,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
-
-
 import java.util.List;
 
+//适配器
 public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
 
     private List<Fruit> mFruitList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+        //构成itemView(数据项视图）
         View fruitView;
         ImageView fruitImage;
         TextView fruitName;
@@ -30,6 +30,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
         }
     }
 
+    //构造函数（传值）
     public FruitAdapter(List<Fruit> fruitList) {
         mFruitList = fruitList;
     }
@@ -58,6 +59,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
     }
 
     @Override
+    //真正赋值数据
     public void onBindViewHolder(ViewHolder holder, int position) {
         Fruit fruit = mFruitList.get(position);
         holder.fruitImage.setImageResource(fruit.getImageId());
@@ -66,6 +68,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
     }
 
     @Override
+    //返回子项数目
     public int getItemCount() {
         return mFruitList.size();
     }
