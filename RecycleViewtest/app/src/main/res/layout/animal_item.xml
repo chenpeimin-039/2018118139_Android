@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal" />
 
-    <TextView
+    <EditText
         android:id="@+id/animal_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

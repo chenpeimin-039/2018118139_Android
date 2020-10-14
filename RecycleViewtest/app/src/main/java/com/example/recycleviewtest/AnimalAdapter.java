@@ -3,12 +3,11 @@ package com.example.recycleviewtest;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder>{
@@ -17,13 +16,13 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
     static class ViewHolder extends RecyclerView.ViewHolder {
         View animalView;
         ImageView animalImage;
-        TextView animalName;
+        EditText animalName;
         TextView animalNo;
         public ViewHolder(View view) {
             super(view);
             animalView=view;
             animalImage=(ImageView)view.findViewById(R.id.animal_image);
-            animalName=(TextView)view.findViewById(R.id.animal_name);
+            animalName=(EditText)view.findViewById(R.id.animal_name);
             animalNo=(TextView)view.findViewById(R.id.animal_no);
         }
     }
