@@ -13,8 +13,7 @@
         -->
         <activity
             android:name=".FirstActivity"
-            android:label="This is FirstActivity"
-            android:launchMode="singleTask">
+            android:label="This is FirstActivity">
             <!--配置主活动-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
-            android:launchMode="singleInstance">
+            android:name=".SecondActivity">
             <intent-filter>
                 <action android:name="com.example.activitytest.ACTION_START" /><!--隐式Intent的标识串-->
                 <category android:name="android.intent.category.DEFAULT" />
