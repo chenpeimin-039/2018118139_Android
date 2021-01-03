@@ -4,8 +4,14 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/*SQLiteOpenHelper类
+定义：SQLiteOpenHelper是一个辅助类
+作用：管理数据库（创建、增、修、删） & 版本的控制。
+使用过程：通过创建子类继承SQLiteOpenHelper类，实现它的一些方法来对数据库进行操作。
+在实际开发中，为了能够更好的管理和维护数据库，我们会封装一个继承自SQLiteOpenHelper类的数据库操作类，然后以这个类为基础，再封装我们的业务逻辑方法。
+*/
+
 //自定义数据库子类（创建数据库）
-//通过创建子类继承SQLiteOpenHelper类，实现它的一些方法来对数据库进行操作。
 public class myDatabaseHelper extends SQLiteOpenHelper {
     private static myDatabaseHelper instance;
     public static final String CREATE_ADMIN = "create table admin(id integer primary key autoincrement, " +
