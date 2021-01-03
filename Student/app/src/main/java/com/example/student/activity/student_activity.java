@@ -39,7 +39,7 @@ public class student_activity extends Activity {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(student_activity.this);
                 builder.setTitle("个人信息");
-                ID = intent.getStringExtra("id");  //获取传入的学号（用于查询所有信息）
+                ID = intent.getStringExtra("id");  //获取传入的学号
                 StringBuilder sb = new StringBuilder();
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 Cursor cursor = db.rawQuery("select * from student where id=?", new String[]{ID});

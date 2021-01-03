@@ -5,10 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 //自定义数据库子类（创建数据库）
+//通过创建子类继承SQLiteOpenHelper类，实现它的一些方法来对数据库进行操作。
 public class myDatabaseHelper extends SQLiteOpenHelper {
     private static myDatabaseHelper instance;
-    public static final String CREATE_ADMIN = "create table admin(id integer primary key autoincrement, name text,password text)";//创建管理员表
-    public static final String CREATE_STUDENT = "create table student(id text primary key,name text,password text,sex text,number text,mathScore integer,chineseScore integer,englishScore integer)";//创建学生表
+    public static final String CREATE_ADMIN = "create table admin(id integer primary key autoincrement, " +
+            "name text,password text)";//创建管理员表
+    public static final String CREATE_STUDENT = "create table student(name text,sex text,id text primary key," +
+            "number text,password text,mathScore integer,chineseScore integer,englishScore integer)";//创建学生表
     private myDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }

@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.example.student.R;
 import com.example.student.tools.myDatabaseHelper;
 
-
  //添加学生信息的界面,修改学生信息的界面
 public class addStudent_info_activity extends Activity {
 
@@ -58,7 +57,7 @@ public class addStudent_info_activity extends Activity {
         sure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //id,name,sex都不能为空（sex不能为空，在StudentAdapter.ImageView里设置图片
+                //id,name,sex都不能为空
                 String name_ = name.getText().toString();
                 String sex_ = sex.getText().toString();
                 String id_ = id.getText().toString();

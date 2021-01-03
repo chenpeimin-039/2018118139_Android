@@ -48,11 +48,11 @@ public class studentInfo_activity extends Activity {
                 builder.setView(textEntryView);
                 builder.setTitle("请选择相关操作");
 
-                Button selectInfo = (Button) textEntryView.findViewById(R.id.student_info_select);//查看学生详细信息按钮
+                //显示详细学生信息
+                Button selectInfo = (Button) textEntryView.findViewById(R.id.student_info_select);
                 selectInfo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //显示详细学生信息
                         AlertDialog.Builder select_builder = new AlertDialog.Builder(studentInfo_activity.this);
                         select_builder.setTitle("学生详细信息");
                         StringBuilder sb = new StringBuilder();
